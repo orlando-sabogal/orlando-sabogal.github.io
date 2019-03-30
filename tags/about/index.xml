@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>about on Orlando Sabogal</title>
+    <link>/tags/about/</link>
+    <description>Recent content in about on Orlando Sabogal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Publications</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>O.A Sabogal Cardona, D.A Escobar García, D.R Oviedo. (2018). Making accessibility visible: visualizing spatial accessibility through multi-dimensional scaling model. Modern Applied Science, Vol 12 (No 6).
+ O.A Sabogal Cardona, J.D Hincapié, F.L Muñoz. (2018). Análisis de accesibilidad a las ciudades de Pereira y Dosquebradas, Book Chapter in “Transporte Urbano: Mirada Social y Tecnológica”. Editorial Universidad Tenológica de Pereira
+ D.A. Escobar García, J. Montoya, O.A Sabogal Cardona (2017). ¿Dónde Ubicar nuevos nodos comerciales en la ciudad de Manizales - Colombia?</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/</guid>
+      <description>Coming Soon
+In the near future I will teach some courses on data struggle, spatial analysis, transportation and related topics.
+I will post here information, code and github repositories.</description>
+    </item>
+    
+  </channel>
+</rss>
