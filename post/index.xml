@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Orlando Sabogal</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Orlando Sabogal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Networks</title>
+      <link>/post/2019/03/30/networks/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/30/networks/</guid>
+      <description>Cooming soon</description>
+    </item>
+    
+    <item>
+      <title>Public Transportation Provition - COMING SOON</title>
+      <link>/post/2019/03/20/public-transportation-provition/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/20/public-transportation-provition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>To Walk or not to Walk - COMING SOON</title>
+      <link>/post/2019/03/20/to-walk-or-not-to-walk/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/20/to-walk-or-not-to-walk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
