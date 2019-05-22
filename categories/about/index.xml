@@ -27,9 +27,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description>Coming Soon
-In the near future I will teach some courses on data struggle, spatial analysis, transportation and related topics.
-I will post here information, code and github repositories.</description>
+      <description>Spatial Analysis Workshop in Uruguay - June 2019
+This is a short course about using geographic data to generate maps and insights. We will see how to use the sf library to load and process data by performing spatial operations. For map-making we are going to introduce the tmap library. Also, we will see how to create interactive maps with leaflet. You can see all the content of the course</description>
     </item>
     
   </channel>
