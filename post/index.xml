@@ -6,36 +6,17 @@
     <description>Recent content in Posts on Orlando Sabogal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Networks</title>
-      <link>/post/2019/03/30/networks/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>/post/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/03/30/networks/</guid>
-      <description>Cooming soon</description>
-    </item>
-    
-    <item>
-      <title>Public Transportation Provition - COMING SOON</title>
-      <link>/post/2019/03/20/public-transportation-provition/</link>
-      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/03/20/public-transportation-provition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>To Walk or not to Walk - COMING SOON</title>
-      <link>/post/2019/03/20/to-walk-or-not-to-walk/</link>
-      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/03/20/to-walk-or-not-to-walk/</guid>
-      <description></description>
+      <guid>/post/1/01/01/</guid>
+      <description>Hagamos un mapa: librería tmap                 code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>
