@@ -112,7 +112,7 @@ Lo que hace tan interesante el mapa de Minard es que logra encapsular mucha info
 La obra de Minard comprende <a href="https://docplayer.es/82422807-Los-cincuenta-mapas-de-minard-un-recorrido-por-algunos-de-los-mapas-estadisticos-de-minard-y-de-los-procedimientos-graficos-que-utilizo.html">otros mapas</a> bastante interesantes y que demuestran su capacidad creativa. Un gran mérito de Minard es haber fabricado sus mapas en una época sin computadores y sin herramientas para capturar y procesar información geográfica. Actualmente existen varias opciones para hacer mapas y tal vez la más popular sea utilizar un software de Sistemas de Información Geográfico (SIG) como <em>QGIS</em>. Este camino es bastante eficiente y permite realizar productos de gran calidad. Sin embargo, hay algo que personalmente encuentro molesto cuando utilizo SIGs y es que no está articulado de manera natural con todo mi flujo de trabajo. Dado que todo el procesamiento y análisis de datos lo hago en R, hacer un mapa en un SIG implica exportar los datos desde R y volverlos a cargar a QGIS. Adicional a esto, y dependiendo del software y tipo de mapa, puede llegar a ser muy complicado hacer mapas que sean <em>reproducibles</em> y que se puedan <em>reciclar</em> para hacer mapas similares.
 </p>
 <p align="justify">
-Por supuesto, existen también varias opciones para hacer los mapas directamente en R como <em>ggplot</em> o la función <em>plot()</em>. El año pasado empecé a utilizar la librería <strong>tmap()</strong> desarrollada por <a href="https://mtennekes.github.io/">Martijn Tennekes</a> y en mi opinión es bastante fácil de usar, ofrece mucha flexibilidad y las funciones que trae permitien configurar muchos detalles de los mapas. En este blog voy a hacer una presentación de la librería y voy a enseñar las princiaples funcionalidades que he utilizado durante el último año. Espero que sea de gran ayuda y que con algo de esfuerzo sea más fácil producir mapas que, como el de la Marcha de Napoleón de Minard, <em>narren</em> historias y presenten información compleja en una imagen.
+Por supuesto, existen también varias opciones para hacer los mapas directamente en R como <em>ggplot</em> o la función <em>plot()</em>. El año pasado empecé a utilizar la librería <strong>tmap()</strong> desarrollada por <a href="https://mtennekes.github.io/">Martijn Tennekes</a> y en mi opinión es bastante fácil de usar, ofrece mucha flexibilidad y las funciones que trae permiten configurar muchos detalles de los mapas. En este blog voy a hacer una presentación de la librería y voy a enseñar las principales funcionalidades que he utilizado durante el último año. Espero que sea de gran ayuda y que con algo de esfuerzo sea más fácil producir mapas que, como el de la Marcha de Napoleón de Minard, <em>narren</em> historias y presenten información compleja en una imagen.
 </p>
 <p align="justify">
 Hay muchos otros recursos (mirar la última sección) que enseñan a usar <strong>tmap</strong>. Mis dos principales motivaciones para hacer otro tutorial son que, por un lado, no existen muchos documentos en español que personas en latinoamérica que no leen en inglés pueden consumir. Y por el otro lado, quería hacer un documento para mi mismo con las principales operaciones que realizo en <strong>tmap</strong> y tener un guía personalizada para consultar en el futuro.
@@ -121,10 +121,10 @@ Hay muchos otros recursos (mirar la última sección) que enseñan a usar <stron
 <div id="introduccion-y-rudimentos" class="section level1">
 <h1>Introducción y Rudimentos</h1>
 <p align="justify">
-La lógica de <em>tmap</em> es similar a la de <em>ggplot</em> por lo que algo de experiencia en <em>ggplot</em> hará que sea mucho más fácil entender. Sin embargo, no es necesario tener conocimientos previos. De manera muy general, primero se define el objecto espacial que se va dibujar mediante la función <strong>tm_shape()</strong> y después se indica que se quiere graficar con ese objeto espacial y se pasa otra función dependiendo de su clase. Por ejemplo, si es un objeo de líneas la función a utilizar es <strong>tm_lines()</strong> o si es un objeto de polígonos se usa la función <strong>tm_polygons()</strong>. A continuacón se pueden agregar nuevos objetos espaciales usando de nuevo <strong>tm_shape()</strong> y usando una función para dibujarlo. Al agregar un nuevo objeto espacial este se dibuja sobre lo que ya se ha graficado, un funcionamiento análogo al de los SIGs.
+La lógica de <em>tmap</em> es similar a la de <em>ggplot</em> por lo que algo de experiencia en <em>ggplot</em> hará que sea mucho más fácil entender. Sin embargo, no es necesario tener conocimientos previos. De manera muy general, primero se define el objeto espacial que se va dibujar mediante la función <strong>tm_shape()</strong> y después se indica que se quiere graficar con ese objeto espacial y se pasa otra función dependiendo de su clase. Por ejemplo, si es un objeo de líneas la función a utilizar es <strong>tm_lines()</strong> o si es un objeto de polígonos se usa la función <strong>tm_polygons()</strong>. A continuacón se pueden agregar nuevos objetos espaciales usando de nuevo <strong>tm_shape()</strong> y usando una función para dibujarlo. Al agregar un nuevo objeto espacial este se dibuja sobre lo que ya se ha graficado, un funcionamiento análogo al de los SIGs.
 </p>
 <p align="justify">
-<p>Otra aspecto a tener en cuenta es que las funciones se van agregando mediante el operados <strong>“+”</strong>. Todas las funciones en <strong>tmap</strong> comienzan de la forma <strong>tm_</strong>.</p>
+<p>Otra aspecto a tener en cuenta es que las funciones se van agregando mediante el operador <strong>“+”</strong>. Todas las funciones en <strong>tmap</strong> comienzan de la forma <strong>tm_</strong>.</p>
 <p>Además de <strong>tmap</strong>, vamos a utilizar otras dos librerías:</p>
 <ul>
 <li><strong>sf</strong>: Simple Features, proporciona un estándar para trabajar con datos espaciales vectoriales (como los archivos ESRI shape).</li>
@@ -144,7 +144,7 @@ Londres &lt;- spData::lnd</code></pre>
 <pre class="r"><code>tm_shape(Londres) + tm_polygons()</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p align="justify">
-El primer mapa parece una nube de puntos y el segundo se limita a una división administrativa de la ciudad. Sobreponiendo las estaciones sobre los polígonos y configurando algunos argumentos se obtiene un mapa más interesante.
+El primer mapa parece una nube de puntos y el segundo se limita a una división administrativa de la ciudad. Sobreponiendo las estaciones en los polígonos y configurando algunos argumentos se obtiene un mapa más interesante.
 </p>
 <pre class="r"><code>tm_shape(Londres) + tm_polygons(col = &quot;ONS_INNER&quot;) +
   tm_shape(shp = AlquilerBicicletas) + tm_dots(size = &quot;nbikes&quot;, alpha = 0.2, col = &quot;blue&quot;)</code></pre>
@@ -185,7 +185,7 @@ Si el mapa no se muestra en el navegador puede correr el código de manera local
 <h1>Haciendo un mapa</h1>
 <br/>
 <p align="justify">
-Ya vimos la lógica y algunos aspectos de <strong>tmap</strong>, y ya estamos en la capacidad de hacer algunos mapas. Pero todavía faltan varios elementos para que nuestros mapas se vean mejor. Nos interesa configurar la legenda que se muestra, agregar una brújula y mostrar la escala. Todo esto lo vamos a ilustrar usando datos del Síndrome de Muertes Infantíles Repentinas en <a href="https://nowosad.github.io/spData/reference/nc.sids.html">Carolina del Norte</a>.
+Ya vimos la lógica y algunos aspectos de <strong>tmap</strong>, y ya estamos en la capacidad de hacer algunos mapas. Pero todavía faltan varios elementos para que nuestros mapas se vean mejor. Nos interesa configurar la leyenda que se muestra, agregar una brújula y mostrar la escala. Todo esto lo vamos a ilustrar usando datos del Síndrome de Muertes Infantíles Repentinas en <a href="https://nowosad.github.io/spData/reference/nc.sids.html">Carolina del Norte</a>.
 </p>
 <pre class="r"><code>nc = st_read(system.file(&quot;shape/nc.shp&quot;, package=&quot;sf&quot;)) #st_read hace parte de sf y se está usando para leer un archivo shape. </code></pre>
 <pre><code>## Reading layer `nc&#39; from data source `/Library/Frameworks/R.framework/Versions/3.5/Resources/library/sf/shape/nc.shp&#39; using driver `ESRI Shapefile&#39;
@@ -196,13 +196,13 @@ Ya vimos la lógica y algunos aspectos de <strong>tmap</strong>, y ya estamos en
 ## epsg (SRID):    4267
 ## proj4string:    +proj=longlat +datum=NAD27 +no_defs</code></pre>
 <p align="justify">
-La legenda siempre aparece por defecto cuando configuramos algún argumento como una variable de algún objeto en <strong>tm_shape()</strong>. La brújula y la escala se crean usando <strong>tm_compass()</strong> y <strong>tm_scale_bar()</strong>.
+La leyenda siempre aparece por defecto cuando configuramos algún argumento como una variable de algún objeto en <strong>tm_shape()</strong>. La brújula y la escala se crean usando <strong>tm_compass()</strong> y <strong>tm_scale_bar()</strong>.
 </p>
 <pre class="r"><code>tm_shape(nc) + tm_polygons(col=&quot;BIR79&quot;) + 
   tm_compass() + tm_scale_bar()</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<div id="legendas---funcion-tm_layout" class="section level2">
-<h2>Legendas - función tm_layout()</h2>
+<div id="leyendas---funcion-tm_layout" class="section level2">
+<h2>leyendas - función tm_layout()</h2>
 <p align="justify">
 Mediante las funcionesn <strong>tm_layout()</strong> o <strong>tm_legend()</strong> se pueden hacer cosas como establecer el tamaño usando el argumento <em>scale</em>, fijar un marco con <em>legend.frame = T</em> o poner un título con <em>title</em>.
 </p>
@@ -212,7 +212,7 @@ Mediante las funcionesn <strong>tm_layout()</strong> o <strong>tm_legend()</stro
               legend.position = c(0.2,0.03))</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p align="justify">
-La posición de la legenda en el mapa es un vector con dos elementos para las coordenadas en el <em>eje X</em> y en el <em>eje Y</em>. En el mapa anterior las coordenadas eran <em>legend.position = c(0.2,0.03)</em> y para el siguiente la uibcamos en la ezquina superior izquierda haciendo <em>legend.position = c(0.005,0.69)</em>. También es importante notar que el titulo de la legenda no se establece directamente en <strong>tm_layout()</strong> sino que se toma del artumento <em>title</em> en <strong>tm_polygons()</strong>. De esta manera, hay una sublegenda para cada variable que se utiliza dentro del mapa para expresar color, tamaño o alguna otra característica.
+La posición de la leyenda en el mapa es un vector con dos elementos para las coordenadas en el <em>eje X</em> y en el <em>eje Y</em>. En el mapa anterior las coordenadas eran <em>legend.position = c(0.2,0.03)</em> y para el siguiente la uicamos en la esquina superior izquierda haciendo <em>legend.position = c(0.005,0.69)</em>. También es importante notar que el titulo de la leyenda no se establece directamente en <strong>tm_layout()</strong> sino que se toma del argumento <em>title</em> en <strong>tm_polygons()</strong>. De esta manera, hay una subleyenda para cada variable que se utiliza dentro del mapa para expresar color, tamaño o alguna otra característica.
 </p>
 <pre class="r"><code>tm_shape(nc) + tm_polygons(col=&quot;BIR79&quot;, title = &quot;Nacimientos 1979 - 84&quot;) + 
     tm_legend(legend.position = c(0.005,0.69),
@@ -220,7 +220,7 @@ La posición de la legenda en el mapa es un vector con dos elementos para las co
               legend.frame = T)</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p align="justify">
-A la legenda se puede agregar información que no necesariamente se ha usado dentro del mapa. En el mapa que se muestra a continuación se incluyeron dos sublegendas que representan áreas y puntos que ni siquiera existen en el mapa. La función <strong>tm_layout()</strong> tiene más de 30 argumentos por lo que solamente hacer ajustes en la legenda ya proporciona muchas opciones y flexibilidad.
+A la leyenda se puede agregar información que no necesariamente se ha usado dentro del mapa. En el mapa que se muestra a continuación se incluyeron dos subleyendas que representan áreas y puntos que ni siquiera existen en el mapa. La función <strong>tm_layout()</strong> tiene más de 30 argumentos por lo que solamente hacer ajustes en la leyenda ya proporciona muchas opciones y flexibilidad.
 </p>
 <pre class="r"><code>tm_shape(nc) + tm_polygons(col=&quot;BIR79&quot;, title = &quot;Nacimientos 1979 - 84&quot;) + 
     tm_layout(title = &quot;Este es mi titulo&quot;,
@@ -287,7 +287,7 @@ El argumento <em>show.labels</em> marca cuántas de las direcciones cardinales v
                  lwd = 5, color.dark = &quot;darkgreen&quot;, color.light = &quot;blue&quot;)</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p align="justify">
-Si quiere probar diferentes opciones es bueno revisar la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_layout">documentatción para la legenda</a>, la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_compass">documentatción para la brújula</a> y la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_scale_bar">documentatción para la escala</a>.
+Si quiere probar diferentes opciones es bueno revisar la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_layout">documentatción para la leyenda</a>, la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_compass">documentatción para la brújula</a> y la <a href="https://www.rdocumentation.org/packages/tmap/versions/2.2/topics/tm_scale_bar">documentatción para la escala</a>.
 </p>
 <hr/>
 <p align="justify">
@@ -321,7 +321,7 @@ Personalmente los colores siempre son la parte más difícil de definir para un 
                  lwd = 3)</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <p align="justify">
-En la función <em>palette</em> se puede ingresar cualquiera de las paletes de R o las proporcionadas por <strong>RColorBrewer</strong>. También se pueden invertir agregando un símobolo negativo al inicio de la paleta (<em>palette = “-YlGnBu”</em>)
+En la función <em>palette</em> se puede ingresar cualquiera de las paletes de R o las proporcionadas por <strong>RColorBrewer</strong>. También se pueden invertir agregando un símbolo negativo al inicio de la paleta (<em>palette = “-YlGnBu”</em>)
 </p>
 <pre class="r"><code>library(RColorBrewer)
 #display.brewer.all()</code></pre>
@@ -336,7 +336,7 @@ En la función <em>palette</em> se puede ingresar cualquiera de las paletes de R
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <div id="paleta-personalizada" class="section level2">
 <h2>Paleta personalizada</h2>
-<p>Miramos bien cómo es el comportamiento de la variable que estamos usando para colorear los polígonos.</p>
+<p>Miremos bien cómo es el comportamiento de la variable que estamos usando para colorear los polígonos.</p>
 <pre class="r"><code>summary(nc$BIR79)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##     319    1336    2636    4224    4889   30757</code></pre>
@@ -394,7 +394,7 @@ MapaUK &lt;- tm_shape(UK) + tm_polygons()</code></pre>
 <pre class="r"><code>MapaLondres
 print(MapaUK, vp = viewport(0.17, 0.8, width = 0.25, height = 0.25))</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
-<p>Y por último, miremos la forma de ubicar el rectángulo de londre en el mapa auxiliar.</p>
+<p>Y por último, miremos la forma de ubicar el rectángulo de Londres en el mapa auxiliar.</p>
 <pre class="r"><code>CajaLondres &lt;- st_bbox(Londres) %&gt;% st_as_sfc()</code></pre>
 <pre class="r"><code>tm_shape(CajaLondres) + tm_polygons(col = &quot;white&quot;, border.col = &quot;blue&quot;, lwd = 4)</code></pre>
 <p><img src="/post/2019-07-23-hagamos-un-mapa-librer%C3%ADa-tmap_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
