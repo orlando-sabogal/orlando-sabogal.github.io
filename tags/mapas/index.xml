@@ -6,17 +6,18 @@
     <description>Recent content in Mapas on Orlando Sabogal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/mapas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hagamos un mapa: librería tmap</title>
-      <link>/post/1/01/01/hagamos-un-mapa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>/post/2019/07/23/hagamos-un-mapa-librer%C3%ADa-tmap/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/1/01/01/hagamos-un-mapa/</guid>
-      <description>Como probablemente a muchas otras personas les ha pasado, la primera vez que vi la La Marcha de Napoleón de 1812-1813 elabarado por Charles Joseph Minard en 1869 quedé impresionado. El mapa (ver siguiente Figura) narra la historia de la fallida campaña Napoleónica a Rusia y su regreso a Francia. La invasión comenzó el 12 de Marzo y durante mucho tiempo el ejército Francés avanzó sin que las fuerzas Rusas pudieran brindar mucha resistencia.</description>
+      <guid>/post/2019/07/23/hagamos-un-mapa-librer%C3%ADa-tmap/</guid>
+      <description>-- -- Como probablemente a muchas otras personas les ha pasado, la primera vez que vi la La Marcha de Napoleón de 1812-1813 elabarado por Charles Joseph Minard en 1869 quedé impresionado. El mapa (ver siguiente Figura) narra la historia de la fallida campaña Napoleónica a Rusia y su regreso a Francia. La invasión comenzó el 12 de Marzo y durante mucho tiempo el ejército Francés avanzó sin que las fuerzas Rusas pudieran brindar mucha resistencia.</description>
     </item>
     
   </channel>

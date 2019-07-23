@@ -3,12 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2019/07/23/hagamos-un-mapa-librer%C3%ADa-tmap/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/espa%C3%B1ol/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/mapas/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -16,12 +34,31 @@
   </url>
   
   <url>
+    <loc>/post/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -31,6 +68,12 @@
   
   <url>
     <loc>/categories/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tmap/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
